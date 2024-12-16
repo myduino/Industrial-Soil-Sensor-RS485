@@ -68,6 +68,7 @@ void setup() {
   }
   
   Serial.println("Agriculture Kit Sensor Ready");
+  Serial.println("Soil Temperature, Humidity, EC, pH and NPK Sensors");
 
   displayLogo();
 
