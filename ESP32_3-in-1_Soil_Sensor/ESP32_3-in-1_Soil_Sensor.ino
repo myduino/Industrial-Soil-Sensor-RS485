@@ -2,25 +2,19 @@
  * Agriculture Kit
  * Author: Mohamad Ariffin Zulkifli
  * 
- * This is an example sketch for Agricluture Kit
- * Read the Soil parameters from soil sensor using RS485
- * Print the measure soil on Serial Monitor.
- * Show the measured soil parameters on the OLED display.
+ * This is an example sketch for 3-in-1 Soil Sensor
+ * Temperature, Humidity and EC Sensor
  * 
- * Purchase?
- * Shopee - https://shopee.com.my/Agriculture-Kit-ESP32-LoRa-915-MHz-RS485-Modbus-Controller-with-Industrial-Grade-Soil-Temperature-Humidity-NPK-Sensor-i.132184430.15335468998
+ * ESP32 read the sensor data via RS485 Modbus Protocol.
+ * Print the measured soil parameters on the Serial Monitor.
  * 
  */
 
 #include <SoftwareSerial.h>
 
-// Sensor Pin Definition
-#define RS485Power                  18
-
-// If you are using different Development Board,
-// do change the RX, TX pin appropriately
-#define RS485RX                     23
-#define RS485TX                     22
+// RS485 Communication
+#define RS485RX                     18
+#define RS485TX                     19
 
 SoftwareSerial sensor(RS485RX, RS485TX);
 
@@ -44,11 +38,7 @@ void setup() {
   Serial.begin(115200);
   sensor.begin(4800);
 
-  pinMode(RS485Power, OUTPUT);
-  digitalWrite(RS485Power, HIGH);
-
   Serial.println();
-  Serial.println("Agriculture Kit Sensor Ready");
   Serial.println("Soil Temperature, Humidity and EC Sensors");
 
   delay(1000);
