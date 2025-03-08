@@ -61,7 +61,7 @@ Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Tempera
 
 - Example of Response Frame (13 Bytes)
 
-| Address Code | Function Code | Byte Number | Moisture  | Temperature | EC        | pH        | CRC        |
+| Address Code | Function Code | Byte Number | Moisture  | Temperature | EC        | CRC        |
 | ------------ | ------------- | ----------- | --------- | ----------- | --------- | ---------- |
 | 0x01         | 0x03          | 0x0E        | 0x01 0xE6 | 0x01 0x55   | 0x05 0xDC | 0x00 0x30     | 0x04 0x08  |
 - Byte Response Example Calculation
