@@ -1,5 +1,5 @@
 /*
- * Agriculture Kit
+ * Industrial 3-in-1 Soil Sensor
  * Author: Mohamad Ariffin Zulkifli
  * 
  * This is an example sketch for 3-in-1 Soil Sensor

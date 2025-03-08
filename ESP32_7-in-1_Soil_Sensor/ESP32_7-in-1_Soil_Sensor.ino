@@ -1,9 +1,9 @@
 /*
- * Agriculture Kit
+ * Industruino 7-in-1 Soil Sensor
  * Author: Mohamad Ariffin Zulkifli
  * 
- * This is an example sketch for 4-in-1 Soil Sensor
- * Temperature, Moisture, EC and pH Sensor
+ * This is an example sketch for 7-in-1 Soil Sensor
+ * Temperature, Moisture, EC, pH and NPK Sensor
  * 
  * ESP32 read the sensor data via RS485 Modbus Protocol.
  * Print the measured soil parameters on the Serial Monitor.
@@ -18,17 +18,17 @@
 
 SoftwareSerial sensor(RS485RX, RS485TX);
 
-#define sensorFrameSize             13
+#define sensorFrameSize             19
 #define sensorWaitingTime           1000
 #define sensorID                    0x01
 #define sensorFunction              0x03
-#define sensorByteResponse          0x08
+#define sensorByteResponse          0x0E
 
 // RS485 Byte Address Request to Sensor
-unsigned char byteRequest[8] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x04, 0x44, 0x09};
-unsigned char byteResponse[13] = {};
+unsigned char byteRequest[8] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x07, 0x04, 0x08};
+unsigned char byteResponse[19] = {};
 
-float moisture, temperature, ph;
+float moisture, temperature, ph, nitrogen, phosphorus, potassium;
 int ec;
 
 unsigned long lastMillis = 0;
@@ -39,7 +39,7 @@ void setup() {
   sensor.begin(4800);
 
   Serial.println();
-  Serial.println("Soil Temperature, Moisture, EC and pH Sensors");
+  Serial.println("Soil Temperature, Moisture, EC, pH and NPK Sensors");
 
   delay(1000);
 }
@@ -92,12 +92,18 @@ void loop() {
   temperature = sensorValue((int)byteResponse[5], (int)byteResponse[6]) * 0.1;
   ec = sensorValue((int)byteResponse[7], (int)byteResponse[8]);
   ph = sensorValue((int)byteResponse[9], (int)byteResponse[10]) * 0.1;
-
+  nitrogen = sensorValue((int)byteResponse[11], (int)byteResponse[12]);
+  phosphorus = sensorValue((int)byteResponse[13], (int)byteResponse[14]);
+  potassium = sensorValue((int)byteResponse[15], (int)byteResponse[16]);
+  
   // Print the data on Serial Monitor
   Serial.println("Moisture: " + (String)moisture + " %");
   Serial.println("Temperature: " + (String)temperature + " °C");
   Serial.println("EC: " + (String)ec + " uS/cm");
   Serial.println("pH: " + (String)ph);
+  Serial.println("Nitrogen (N): " + (String)nitrogen + " mg/kg");
+  Serial.println("Phosporus (P): " + (String)phosphorus + " mg/kg");
+  Serial.println("Potassium (K): " + (String)potassium + " mg/kg");
 
   delay(5000);
 }
