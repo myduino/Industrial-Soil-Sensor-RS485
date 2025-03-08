@@ -88,24 +88,5 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
     - P = (0x00 * 256 + 0x25) = 37 mg/kg
     - K = (0x00 * 256 + 0x30) = 48 mg/kg
 
-
-## Shipping List
-- Agriculture Kit ESP32 LoRa 915 MHz RS485 Modbus Controller
-- Industrial Grade Soil Sensor
-- Waterproof Case
-
-## Shopping Now
-- [Shopee](https://shopee.com.my/Agriculture-Kit-ESP32-LoRa-915-MHz-RS485-Modbus-Controller-with-Industrial-Grade-Soil-Temperature-Humidity-NPK-Sensor-i.132184430.15335468998)
-- [Myduino: Temperature & Moisture, pH, EC and NPK](https://myduino.com/product/agriculture-kit-esp32-lora-915-mhz-rs485-modbus-controller-with-industrial-grade-soil-temperature-humidity-ph-npk-sensor/)
-- [Myduino: Temperature & Moisture](https://myduino.com/product/agriculture-kit-esp32-lora-915-mhz-rs485-modbus-controller-with-industrial-grade-soil-temperature-humidity-sensor/)
-
-## How To?
-1. Interface and Wiring | Wire Colour: Brown (5~30 VDC), Black (GND), Yellow (RS485 A) and Blue (RS485 B)
-    <p><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-05.jpg" width="350"></a></p>
-    <p><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-06.jpg" width="350"></a></p>
-2. Choose your development environment, Arduino or Micropython.
-3. Use example program from folder [Example Programs](https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/tree/main/Example%20Programs)
-4. Upload or flash the program into the microcontroller. For Arduino IDE, choose board "ESP32 Dev Board".
-
 ## Contact Us
 - Call or [WhatsApp 6013-2859151](https://wa.me/60132899151)
