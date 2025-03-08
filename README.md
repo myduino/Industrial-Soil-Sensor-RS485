@@ -52,7 +52,7 @@ Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Tempera
 - Function Code: 0x03
 - Data Code: 16 bits
 
-### 4-in-1 Soil Sensor Parameters
+### 3-in-1 Soil Sensor Parameters
 - Request Frame (8 Bytes)
 
 | Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
