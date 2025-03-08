@@ -3,7 +3,7 @@
  * Author: Mohamad Ariffin Zulkifli
  * 
  * This is an example sketch for 3-in-1 Soil Sensor
- * Temperature, Humidity and EC Sensor
+ * Temperature, Moisture and EC Sensor
  * 
  * ESP32 read the sensor data via RS485 Modbus Protocol.
  * Print the measured soil parameters on the Serial Monitor.
@@ -39,7 +39,7 @@ void setup() {
   sensor.begin(4800);
 
   Serial.println();
-  Serial.println("Soil Temperature, Humidity and EC Sensors");
+  Serial.println("Soil Temperature, Moisture and EC Sensors");
 
   delay(1000);
 }
