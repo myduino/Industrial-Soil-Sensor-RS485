@@ -1,25 +1,5 @@
-# ESP32 LoRa RS485 Agriculture Kit
-Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Temperature, Moisture & Electrical Conductivity Sensor](https://myduino.com/product/jhs-253/)
-
-<p align="center"><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-01.jpg" width="600"></a></p>
-
-## Consists of 2 Main Components:
-1. ESP32 LoRa RS485 Modbus Controller: The heart of this board is a mighty ESP32 Wi-Fi based microcontroller under ESP-WROOM-32 module as it is compatible with Arduino programming. It has RS485 controller, thus able to convert the RS485 signal from the soil sensor. Integrated with LoRa 915 MHz wireless communication, programmable for Malaysia's LoRa frequency which is 923 MHz.
-2. Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Temperature, Moisture, pH, EC and Nitrogen, Phosphorus and Potassium (NPK). The output signal is RS485 and can be operated broad range of voltage from 5~30 VDC.
-
-<p align="center"><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-02.jpg" width="700"></a></p>
-<p align="center"><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-03.jpg" width="350"></a></p>
-<p align="center"><img src="https://github.com/myinvent/ESP32-LoRa-RS485-Agriculture-Kit/blob/main/references/agriculture-kit-04.jpg" width="350"></a></p>
-
-## ESP32 Controller Board Specifications
-- ESP32-WROOM-32 Module for microcontroller with Wi-Fi and BLE communication.
-- Compatible with Arduino and Micropython Programming
-- USB Serial Chip Silicon Labs CP2104
-    - [Download CP2104 Driver from Silicon Labs Website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers#software)
-- LoRa Module 915 MHz (Programmable to 923 MHz for Malaysia)
-- 0.91" I2C OLED Display
-- Power by Micro USB, Battery or 5 VDC
-- On-board LiPo Charging Circuit
+# Industrial Soil Sensor RS485
+Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Temperature, Moisture, pH, EC and Nitrogen, Phosphorus and Potassium (NPK). The output signal is RS485 and can be operated broad range of voltage from 5~30 VDC.
 
 ## Soil Sensors Specifications
 - Operating Voltage: 5 ~ 30 VDC
