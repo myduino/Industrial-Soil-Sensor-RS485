@@ -51,6 +51,43 @@ Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Tempera
 - Device Address: 0x01
 - Function Code: 0x03
 - Data Code: 16 bits
+
+### 4-in-1 Soil Sensor Parameters
+- Request Frame (8 Bytes)
+
+| Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
+| ------------ | ------------- | ---------------------- | ------------------- | ---------- |
+| 0x01         | 0x03          | 0x00 0x00              | 0x00 0x03           | 0x05 0xCB  |
+
+- Example of Response Frame (13 Bytes)
+
+| Address Code | Function Code | Byte Number | Moisture  | Temperature | EC        | pH        | CRC        |
+| ------------ | ------------- | ----------- | --------- | ----------- | --------- | ---------- |
+| 0x01         | 0x03          | 0x0E        | 0x01 0xE6 | 0x01 0x55   | 0x05 0xDC | 0x00 0x30     | 0x04 0x08  |
+- Byte Response Example Calculation
+    - Moisture Content = (0x01 * 256 + 0xE6) * 0.1 = 48.6 %
+    - Temperature = (0x01 * 256 + 0x55) * 0.1 = 34.1 °C
+    - EC = (0x05 * 256 + 0xDC) = 1500 uS/cm
+
+### 4-in-1 Soil Sensor Parameters
+- Request Frame (8 Bytes)
+
+| Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
+| ------------ | ------------- | ---------------------- | ------------------- | ---------- |
+| 0x01         | 0x03          | 0x00 0x00              | 0x00 0x04           | 0x09 0x44  |
+
+- Example of Response Frame (13 Bytes)
+
+| Address Code | Function Code | Byte Number | Moisture  | Temperature | EC        | pH        | CRC        |
+| ------------ | ------------- | ----------- | --------- | ----------- | --------- | --------- | ---------- |
+| 0x01         | 0x03          | 0x0E        | 0x01 0xE6 | 0x01 0x55   | 0x05 0xDC | 0x01 0x34 | 0x00 0x30     | 0x04 0x08  |
+- Byte Response Example Calculation
+    - Moisture Content = (0x01 * 256 + 0xE6) * 0.1 = 48.6 %
+    - Temperature = (0x01 * 256 + 0x55) * 0.1 = 34.1 °C
+    - EC = (0x05 * 256 + 0xDC) = 1500 uS/cm
+    - pH = (0x01 * 256 + 0x34) * 0.1 = 3.08
+
+### 7-in-1 Soil Sensor Parameters
 - Request Frame (8 Bytes)
 
 | Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
