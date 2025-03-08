@@ -74,7 +74,7 @@ Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Tempera
 
 | Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
 | ------------ | ------------- | ---------------------- | ------------------- | ---------- |
-| 0x01         | 0x03          | 0x00 0x00              | 0x00 0x04           | 0x09 0x44  |
+| 0x01         | 0x03          | 0x00 0x00              | 0x00 0x04           | 0x44 0x09  |
 
 - Example of Response Frame (13 Bytes)
 
@@ -82,10 +82,10 @@ Introducing an affordable [Agriculture Kit ESP32 LoRa 915 MHz RS485 Soil Tempera
 | ------------ | ------------- | ----------- | --------- | ----------- | --------- | --------- | ---------- |
 | 0x01         | 0x03          | 0x08        | 0x02 0x62 | 0x01 0x67   | 0x00 0x06 | 0x00 0x37 | 0xC2 0x06     |
 - Byte Response Example Calculation
-    - Moisture Content = (0x01 * 256 + 0xE6) * 0.1 = 48.6 %
-    - Temperature = (0x01 * 256 + 0x55) * 0.1 = 34.1 °C
-    - EC = (0x05 * 256 + 0xDC) = 1500 uS/cm
-    - pH = (0x01 * 256 + 0x34) * 0.1 = 3.08
+    - Moisture Content = (0x02 * 256 + 0x62) * 0.1 = 61.0 %
+    - Temperature = (0x01 * 256 + 0x67) * 0.1 = 35.9 °C
+    - EC = (0x00 * 256 + 0x06) = 6 uS/cm
+    - pH = (0x00 * 256 + 0x37) * 0.1 = 5.5
 
 ### 7-in-1 Soil Sensor Parameters
 - Request Frame (8 Bytes)
