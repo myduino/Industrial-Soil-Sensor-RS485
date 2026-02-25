@@ -10,8 +10,6 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
 - Moisture Content
     - Measurement Range: 0 ~ 100 %
     - Measurement Accuracy: ±3 %
-    - Measurement Range: 0 ~ 100 %
-    - Measurement Accuracy: ±3 %
 - Electrical Conductivity (EC).
     - Measurement Range: 0 ~ 20000 uS/cm
     - Measurement Resolution: 1 uS/cm
@@ -22,7 +20,7 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
     - Measurement Range: 0 ~ 2999 mg/kg
     - Measurement Resolution: 1 mg/kg 
 
-## RS845 Communication Details
+## RS485 Communication Details
 - Data Bits: 8-bit
 - Parity Bits: NO
 - Stop Bit: 1
