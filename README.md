@@ -135,4 +135,4 @@ The baud rate is stored in register **0x07D1** and can be changed using write fu
 
 ## Contact Us
 - Call or [WhatsApp 6012-3859151](https://wa.me/60123859151)
-- Website: [Myduino](https:myduino.com)
+- Website: [Myduino](https://myduino.com)
