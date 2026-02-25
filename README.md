@@ -32,12 +32,40 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
 - Function Code: 0x03
 - Data Code: 16 bits
 
+### Change Device Address
+The default device address is **0x01**. Valid address range is **1 to 254**. The address is stored in register **0x07D0** and can be changed using write function code **0x10**.
+
+- Example: Change device address from 0x01 to 0x02 (11 Bytes): `01 10 07 D0 00 01 02 00 02 42 C1`
+
+| Address Code | Function Code | Register Address | Number of Registers | Byte Count | Data (New Address) | CRC       |
+| ------------ | ------------- | ---------------- | ------------------- | ---------- | ------------------ | --------- |
+| 0x01         | 0x10          | 0x07 0xD0        | 0x00 0x01           | 0x02       | 0x00 0x02          | 0x42 0xC1 |
+
+> **Note:** Power cycle the sensor after changing the device address for the new address to take effect.
+
+### Change Baud Rate
+The baud rate is stored in register **0x07D1** and can be changed using write function code **0x10**.
+
+- Baud Rate Values: **0x00** = 2400, **0x01** = 4800 (default), **0x02** = 9600
+
+- Example commands from device address 0x02:
+
+| Baud Rate | Command                            |
+| --------- | ---------------------------------- |
+| 2400      | `02 10 07 D1 00 01 02 00 00 D6 21` |
+| 4800      | `02 10 07 D1 00 01 02 00 01 17 E1` |
+| 9600      | `02 10 07 D1 00 01 02 00 02 57 E0` |
+
+> **Note:** Power cycle the sensor after changing the baud rate for the new setting to take effect.
+
 ### 3-in-1 Soil Sensor Parameters
 - Request Frame (8 Bytes)
 
 | Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
 | ------------ | ------------- | ---------------------- | ------------------- | ---------- |
 | 0x01         | 0x03          | 0x00 0x00              | 0x00 0x03           | 0x05 0xCB  |
+
+> **Note:** The Address Code and CRC bytes will differ if the device address has been changed from the default (0x01).
 
 - Example of Response Frame (11 Bytes)
 
@@ -56,6 +84,8 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
 | Address Code | Function Code | Start Address Register | Length of Register  | CRC        |
 | ------------ | ------------- | ---------------------- | ------------------- | ---------- |
 | 0x01         | 0x03          | 0x00 0x00              | 0x00 0x04           | 0x44 0x09  |
+
+> **Note:** The Address Code and CRC bytes will differ if the device address has been changed from the default (0x01).
 
 - Example of Response Frame (13 Bytes)
 
@@ -76,6 +106,8 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
 | ------------ | ------------- | ---------------------- | ------------------- | ---------- |
 | 0x01         | 0x03          | 0x00 0x00              | 0x00 0x07           | 0x04 0x08  |
 
+> **Note:** The Address Code and CRC bytes will differ if the device address has been changed from the default (0x01).
+
 - Example of Response Frame (19 Bytes)
 
 | Address Code | Function Code | Byte Number | Moisture  | Temperature | EC        | pH        | Nitrogen (N) | Phosphorus (P)  | Potassium (K) | CRC        |
@@ -92,4 +124,4 @@ Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Tempera
     - K = (0x00 * 256 + 0x30) = 48 mg/kg
 
 ## Contact Us
-- Call or [WhatsApp 6013-2859151](https://wa.me/60132899151)
+- Call or [WhatsApp 6012-3859151](https://wa.me/60123859151)
