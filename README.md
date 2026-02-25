@@ -5,10 +5,10 @@
 /_/  /_/\_, /\_,_/\_,_/_/_//_/\___/
        /___/                       
 ai.iot.education.solutions.marketplace ==================================================
-```
 
 Ts. Mohamad Ariffin Zulkifli
 ariffin@myduino.com
+```
 
 # Industrial Soil Sensor RS485
 Industrial-Grade Soil Sensor: Measure multi-parameters of soil including Temperature, Moisture, pH, EC and Nitrogen, Phosphorus and Potassium (NPK). The output signal is RS485 and can be operated broad range of voltage from 5~30 VDC.
